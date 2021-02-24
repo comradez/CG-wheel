@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <vector>
 #include <cassert>
+#include "color.hpp"
 using std::vector;
 using RawMap = vector<vector<unsigned char>>;
 
@@ -33,6 +34,13 @@ public:
         _red   = red;
         _green = green;
         _blue  = blue;
+    }
+    void drawPixel(int x, int y, Color color) {
+        assert(0 <= x && x < _width);
+        assert(0 <= y && y < _height);
+        _red[y][x]   = color.r;
+        _green[y][x] = color.g;
+        _blue[y][x]  = color.b;
     }
     void drawPixel(int x, int y, int r, int g, int b) {
         //以左上角为原点，向右为x轴正方向，向下为y轴正方向

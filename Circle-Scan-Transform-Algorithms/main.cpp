@@ -38,6 +38,6 @@ void DDA_test(int width, int height, char* fileName) {
 }
 
 int main() {
-    DDA_test(256, 256, "test.ppm");
+    DDA_test(256, 256, "test.jpg");
     return 0;
 }

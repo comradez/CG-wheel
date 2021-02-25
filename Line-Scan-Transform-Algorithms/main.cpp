@@ -104,7 +104,7 @@ void DDA_test(int width, int height, char* fileName) {
     PixMap test(width, height);
     Color white(255, 255, 255);
     drawLine_Bresenham(test, 10, 100, 200, 200, white);
-    test.output(fileName);
+    test.outputPPM(fileName);
 }
 
 int main() {

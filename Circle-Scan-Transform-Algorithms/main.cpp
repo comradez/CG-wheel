@@ -17,14 +17,13 @@ void circleDraw(PixMap& pic, int cx, int cy, int x, int y, Color color) {
 }
 
 void midPointCircle(PixMap& pic, int cx, int cy, int r, Color color) {
-	int x = 0, y = r;
-	double d = 1.25 -  r;
+	int x = 0, y = r, d = 5 - 4 * r;
 	circleDraw(pic, cx, cy, x, y, color);
 	while (x <= y) {
 		if (d < 0) {
-			d +=  2 * x + 3;
+			d +=  8 * x + 12;
 		} else {
-			d += 2 * (x - y) + 5;
+			d += 8 * (x - y) + 20;
 			y -= 1;
 		} x += 1;
 		circleDraw(pic, cx, cy, x, y, color);
